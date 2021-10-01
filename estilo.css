@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("espaco.jpg");
+	background-size: cover;
+	animation: translacao 25s linear infinite;
+}
+
+.globo {
+	width: 500px;
+	height: 400px;
+	background-color: white;
+	border-radius: 50%;
+	background: url("terra.jpg");
+	background-size: cover;
+	box-shadow: -25px -25px 25px black inset, 0px 0px 20px inset white, 0px 0px 40px #747fe0;
+	animation: rotacionar 10s linear infinite;
+	display: flex; /*bastava inserir esta linha de código, estava inserindo no filho. */
+}
+
+@keyframes rotacionar {
+	to {
+		background-position: -200% ;
+	}
+}
+
+@keyframes translacao {
+	0% {
+		background-position: 0% ;
+	}
+	100% {
+		background-position: -1000% ;
+	}
+}
